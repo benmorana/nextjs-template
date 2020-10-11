@@ -1,3 +1,1 @@
-Updating Code TO See HOW PR acts with two projects linked to the same and now with a webhook and then with other changes and now making more changes
-
-Try having the two same env keys
+Updating Code TO See HOW PR acts with two projects linked to the same and now with a webhook and then with other changes and now making more changes. Try having the two same env keys
