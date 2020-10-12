@@ -10,7 +10,8 @@ module.exports = {
           source: '/:path*',
           destination: `https://curly-waterfall-c6ef.ccsite.workers.dev/:path*?vercelURL=${process.env.VERCEL_URL}&buildID=${process.env.BUILD_ID}`,
         }
-      ]
+      ];
     }
+    return [];
   },
 }
