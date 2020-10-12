@@ -1,4 +1,5 @@
 module.exports = {
+  trailingSlash: true,
   async rewrites() {
     if(process.env.VERCEL_URL) {
       return [
