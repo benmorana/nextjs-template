@@ -3,8 +3,8 @@ module.exports = {
     if(process.env.VERCEL_URL) {
       return [
         {
-          source: '/vercel-proxy/:path*',
-          destination: '/vercel-proxy/:path*',
+          source: '/cloudflare-proxy/:path*{/}?',
+          destination: '/cloudflare-proxy/:path*',
         },
         {
           source: '/:path*{/}?',
