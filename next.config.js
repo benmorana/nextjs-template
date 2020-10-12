@@ -4,12 +4,16 @@ module.exports = {
       // If we are in the Vercel Ecosystem
       return [
         {
+          source: '/',
+          destination: `https://curly-waterfall-c6ef.ccsite.workers.dev/?vercelURL=${process.env.VERCEL_URL}&buildID=${process.env.BUILD_ID}&env=${process.env.ENV}&path=`,
+        },
+        {
           source: '/cloudflare-proxy/:path*{/}?',
           destination: '/cloudflare-proxy/:path*',
         },
         {
           source: '/:path*',
-          destination: `https://curly-waterfall-c6ef.ccsite.workers.dev/:path*?vercelURL=${process.env.VERCEL_URL}&buildID=${process.env.BUILD_ID}&env=${process.env.ENV}`,
+          destination: `https://curly-waterfall-c6ef.ccsite.workers.dev/:path*?vercelURL=${process.env.VERCEL_URL}&buildID=${process.env.BUILD_ID}&env=${process.env.ENV}&path=:path*`,
         }
       ];
     }
