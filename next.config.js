@@ -1,6 +1,7 @@
 module.exports = {
   async rewrites() {
     if(process.env.VERCEL_URL) {
+      // If we are in the Vercel Ecosystem
       return [
         {
           source: '/cloudflare-proxy/:path*{/}?',
