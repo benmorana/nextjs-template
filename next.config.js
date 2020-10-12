@@ -7,7 +7,11 @@ module.exports = {
           destination: '/cloudflare-proxy/:path*',
         },
         {
-          source: '/:path*{/}?',
+          source: '/',
+          destination: `https://curly-waterfall-c6ef.ccsite.workers.dev/?vercelURL=${process.env.VERCEL_URL}&buildID=${process.env.BUILD_ID}&env=${process.env.ENV}`,
+        },
+        {
+          source: '/:path*',
           destination: `https://curly-waterfall-c6ef.ccsite.workers.dev/:path*?vercelURL=${process.env.VERCEL_URL}&buildID=${process.env.BUILD_ID}&env=${process.env.ENV}`,
         }
       ];
