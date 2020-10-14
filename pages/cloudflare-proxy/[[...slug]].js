@@ -71,7 +71,7 @@ export async function getStaticPaths() {
       { params: { slug: ['1'] } },
       { params: { slug: ['2'] } }
     ],
-    fallback: false
+    fallback: true
   };
 }
 
