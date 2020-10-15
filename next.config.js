@@ -3,9 +3,13 @@ module.exports = {
     if(process.env.VERCEL_URL) {
       // If we are in the Vercel Ecosystem
       return [
+//         {
+//           source: '/cloudflare-proxy/:path*',
+//           destination: '/cloudflare-proxy/:path*',
+//         },
         {
-          source: '/cloudflare-proxy/:path*',
-          destination: '/cloudflare-proxy/:path*',
+          source: '/:path*?proxied=true',
+          destination: '/:path*?proxied=true',
         },
         {
           source: '/:path*',
