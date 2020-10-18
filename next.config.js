@@ -8,8 +8,8 @@ module.exports = {
 //           destination: '/cloudflare-proxy/:path*',
 //         },
         {
-          source: '/:path*?proxied=true',
-          destination: '/:path*?proxied=true',
+          source: '/:path*',
+          destination: '/:path*',
         },
         {
           source: '/:path*',
