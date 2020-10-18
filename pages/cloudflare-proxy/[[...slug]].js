@@ -77,7 +77,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async ({params}) => {
   if(params.slug > 5) {
-    throw Error('No page found');
+    return {notFound: true};
   }
   const posts = ['test'];
 
