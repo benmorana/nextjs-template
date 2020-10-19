@@ -7,7 +7,6 @@ class MyDocument extends Document {
       console.log('Triggered auth');
       ctx.res.statusCode = 401
       ctx.res.setHeader('WWW-Authenticate', `Basic realm="Access private Cancer Council site"`)
-      ctx.res.end('401 Access Denied')
     }
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
