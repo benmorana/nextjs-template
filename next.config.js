@@ -3,13 +3,9 @@ module.exports = {
     if(process.env.VERCEL_URL) {
       // If we are in the Vercel Ecosystem
       return [
-//         {
-//           source: '/cloudflare-proxy/:path*',
-//           destination: '/cloudflare-proxy/:path*',
-//         },
         {
-          source: '/vercel.svg',
-          destination: 'https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg',
+          source: '/fonts/:path*',
+          destination: 'https://assets.cancer.org.au/fonts/:path*',
         },
         {
           source: '/:path*',
