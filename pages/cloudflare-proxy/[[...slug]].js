@@ -76,6 +76,14 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({params}) => {
+  if(params.slug > 15) {
+    return {
+      redirect: {
+        permanent: true,
+        destination: '/somewhere-else'
+      }
+    }
+  }
   if(params.slug > 5) {
     return {
       notFound: true,
