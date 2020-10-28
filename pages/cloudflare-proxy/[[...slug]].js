@@ -71,13 +71,15 @@ export async function getStaticPaths() {
       { params: { slug: ['1'] } },
       { params: { slug: ['2'] } }
     ],
-    fallback: false
+    fallback: 'blocking'
   };
 }
 
 export const getStaticProps = async ({params}) => {
   if(params.slug > 5) {
-    return {notFound: true};
+    return {
+      notFound: true,
+    }
   }
   const posts = ['test'];
 
