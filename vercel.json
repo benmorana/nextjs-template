@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/vercel.svg", "destination": "https://img.etimg.com/thumb/msid-59738997,width-1070,height-580,overlay-economictimes/photo.jpg" }
+  ]
+}
